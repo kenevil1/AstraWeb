@@ -101,7 +101,7 @@ function runExistingScripts(scriptsLocation)
 {
     for(var location in scriptsLocation)
     {
-        var run = setTimeout ( function() {
+        var run = setTimeout ( () => {
             var script = spawn('python', [location]);
             scriptRunner(req, res, script);
         }, 0);
@@ -111,7 +111,7 @@ function runExistingScripts(scriptsLocation)
 //Runs inputed script and outputs results to web response
 function runScript(req, res, location)
 {
-    var run = setTimeout ( function() {
+    var run = setTimeout ( () => {
         var script = spawn('python', [location]);
         scriptRunner(req, res, script);
     }, 0);
